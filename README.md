@@ -1,69 +1,71 @@
-# Pong Terminal
+# PONG
+
+```text
+██████╗  ██████╗ ███╗   ██╗ ██████╗
+██╔══██╗██╔═══██╗████╗  ██║██╔════╝
+██████╔╝██║   ██║██╔██╗ ██║██║  ███╗
+██╔═══╝ ██║   ██║██║╚██╗██║██║   ██║
+██║     ╚██████╔╝██║ ╚████║╚██████╔╝
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+```
 
 Terminal Pong built with Go, Bubble Tea, Lip Gloss, and Bubbles.
 
-## Run locally
+Fast rounds, AI difficulty levels, animated win and lose states, keyboard-first gameplay, and a clean terminal UI.
+
+Creator: [`github.com/It-Shu`](https://github.com/It-Shu)
+
+## What Is Inside
+
+- Single-player Pong against AI
+- `Easy`, `Medium`, and `Hard` difficulty modes
+- Pause, restart, and return-to-menu flow
+- Terminal-native UI effects for goals, victory, and defeat
+- Cross-platform Go project for Windows, macOS, and Linux
+
+## Controls
+
+- `up` move up
+- `down` move down
+- `space` start or resume
+- `p` pause
+- `r` restart
+- `m` back to menu
+- `q` quit
+
+## Run It Locally
+
+If you have Go installed:
 
 ```bash
 go run .
 ```
 
-## Build locally
+## Build It
+
+Linux / macOS:
 
 ```bash
 go build -o pong-terminal .
+./pong-terminal
 ```
 
-On Windows the output will be `pong-terminal.exe`.
+Windows:
 
-## Cross-platform releases
-
-This repo is configured for release builds on:
-
-- Windows
-- macOS
-- Linux
-
-for these architectures:
-
-- `amd64`
-- `arm64`
-
-Release packaging is handled by [GoReleaser](https://goreleaser.com/).
-
-### Local release test
-
-Install GoReleaser and run:
-
-```bash
-goreleaser release --snapshot --clean
+```powershell
+go build -o pong-terminal.exe .
+.\pong-terminal.exe
 ```
 
-Artifacts will be generated in `dist/`.
+## Tech
 
-### Publish a real release
-
-1. Commit your changes.
-2. Create a git tag:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-3. GitHub Actions will build and publish archives for Windows, macOS, and Linux automatically.
-
-### Produced artifacts
-
-- `pong-terminal_<version>_windows_amd64.zip`
-- `pong-terminal_<version>_linux_amd64.tar.gz`
-- `pong-terminal_<version>_linux_arm64.tar.gz`
-- `pong-terminal_<version>_darwin_amd64.tar.gz`
-- `pong-terminal_<version>_darwin_arm64.tar.gz`
-
-Each release also includes `checksums.txt`.
+- Go
+- [Bubble Tea](https://github.com/charmbracelet/bubbletea)
+- [Lip Gloss](https://github.com/charmbracelet/lipgloss)
+- [Bubbles](https://github.com/charmbracelet/bubbles)
 
 ## Notes
 
-- The binary name is `pong-terminal`.
-- If you later publish this as `go install ...`, update `go.mod` to your final repository module path.
+- The game is designed for a modern terminal with Unicode support.
+- Best experience is in Windows Terminal, iTerm2, or a modern Linux terminal.
+- If the window is too small, enlarge the terminal a bit for a cleaner layout.
