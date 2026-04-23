@@ -40,7 +40,7 @@ async function main() {
 
   const versionTag = `v${pkg.version}`;
   const ext = os === "windows" ? "zip" : "tar.gz";
-  const asset = `pong-terminal_${versionTag}_${os}_${arch}.${ext}`;
+  const asset = `pong-terminal_${pkg.version}_${os}_${arch}.${ext}`;
   const url = `https://github.com/It-Shu/pong/releases/download/${versionTag}/${asset}`;
 
   await fsp.rm(vendorDir, { recursive: true, force: true });

@@ -1,6 +1,6 @@
 {
   "name": "@shsergei/pong-terminal",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Terminal Pong game with a native Go binary installer",
   "bin": {
     "pong-terminal": "bin/pong-terminal.js"
