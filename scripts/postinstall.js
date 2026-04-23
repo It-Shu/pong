@@ -69,6 +69,9 @@ async function main() {
   if (!isWindows) {
     await fsp.chmod(installedBinary, 0o755);
   }
+
+  process.stdout.write("\nInstalled successfully.\n");
+  process.stdout.write("Run: pong-terminal\n");
 }
 
 function download(url, destination) {

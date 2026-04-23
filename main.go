@@ -814,7 +814,7 @@ func (m model) overlayLines() []string {
 }
 
 func (m model) overlayStyle() lipgloss.Style {
-	if m.state == stateWaiting && m.flashTimer > 0 && len(m.flashText) > 0 {
+	if (m.state == stateWaiting && m.flashTimer > 0 && len(m.flashText) > 0) || m.state == statePaused {
 		return m.flashStyle
 	}
 	return m.bannerStyle
