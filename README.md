@@ -15,6 +15,26 @@ Fast rounds, AI difficulty levels, animated win and lose states, keyboard-first 
 
 Creator: [`github.com/It-Shu`](https://github.com/It-Shu)
 
+## Install In One Command
+
+Linux / macOS:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/It-Shu/pong/main/install.sh | sh
+```
+
+Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/It-Shu/pong/main/install.ps1 | iex
+```
+
+After install, run:
+
+```bash
+pong-terminal
+```
+
 ## What Is Inside
 
 - Single-player Pong against AI

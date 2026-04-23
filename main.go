@@ -666,17 +666,19 @@ func (m model) renderMenuView() string {
 		Render(terminalLink("https://github.com/It-Shu", "github.com/It-Shu"))
 
 	options := make([]string, 0, len(aiDifficulties))
+	menuWidth := 12
 	for i, difficulty := range aiDifficulties {
-		line := fmt.Sprintf("%s  %s", difficulty.label, difficulty.playerWindow)
+		line := lipgloss.NewStyle().Width(menuWidth).Align(lipgloss.Left).Render(difficulty.label)
 		if i == m.menuIndex {
 			line = lipgloss.NewStyle().
 				Bold(true).
 				Foreground(lipgloss.Color("230")).
 				Background(lipgloss.Color("62")).
 				Padding(0, 1).
+				Width(menuWidth + 4).
 				Render("▶ " + line)
 		} else {
-			line = m.helpStyle.Render("  " + line)
+			line = m.helpStyle.Width(menuWidth + 4).Render("  " + line)
 		}
 		options = append(options, line)
 	}
