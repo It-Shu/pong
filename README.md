@@ -17,16 +17,10 @@ Creator: [`github.com/It-Shu`](https://github.com/It-Shu)
 
 ## Install In One Command
 
-Linux / macOS:
+Any system with Node.js and npm:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/It-Shu/pong/main/install.sh | sh
-```
-
-Windows PowerShell:
-
-```powershell
-irm https://raw.githubusercontent.com/It-Shu/pong/main/install.ps1 | iex
+npm install -g pong-terminal
 ```
 
 After install, run:

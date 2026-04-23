@@ -1,0 +1,40 @@
+{
+  "name": "pong-terminal",
+  "version": "0.1.0",
+  "description": "Terminal Pong game with a native Go binary installer",
+  "bin": {
+    "pong-terminal": "bin/pong-terminal.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "README.md"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/It-Shu/pong.git"
+  },
+  "homepage": "https://github.com/It-Shu/pong",
+  "bugs": {
+    "url": "https://github.com/It-Shu/pong/issues"
+  },
+  "keywords": [
+    "pong",
+    "terminal",
+    "game",
+    "bubbletea",
+    "go"
+  ],
+  "author": "It-Shu",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "extract-zip": "^2.0.1",
+    "tar": "^7.4.3"
+  }
+}
