@@ -73,7 +73,12 @@ async function main() {
 
 function download(url, destination) {
   return new Promise((resolve, reject) => {
-    const request = https.get(url, (response) => {
+    const request = https.get(url, {
+      headers: {
+        "User-Agent": "@shsergei/pong-terminal-installer",
+        "Accept": "application/octet-stream"
+      }
+    }, (response) => {
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
         response.resume();
         return resolve(download(response.headers.location, destination));
@@ -81,7 +86,7 @@ function download(url, destination) {
 
       if (response.statusCode !== 200) {
         response.resume();
-        return reject(new Error(`Download failed with status ${response.statusCode}`));
+        return reject(new Error(`Download failed with status ${response.statusCode} for ${url}`));
       }
 
       const file = fs.createWriteStream(destination);

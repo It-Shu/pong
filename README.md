@@ -20,7 +20,7 @@ Creator: [`github.com/It-Shu`](https://github.com/It-Shu)
 Any system with Node.js and npm:
 
 ```bash
-npm install -g pong-terminal
+npm install -g @shsergei/pong-terminal
 ```
 
 After install, run:
