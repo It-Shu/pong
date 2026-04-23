@@ -1,0 +1,56 @@
+version: 2
+
+project_name: pong-terminal
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: pong-terminal
+    main: ./main.go
+    binary: pong-terminal
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - windows
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: windows
+        goarch: arm64
+    ldflags:
+      - -s -w
+
+archives:
+  - id: default
+    builds:
+      - pong-terminal
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- .Version }}_
+      {{- .Os }}_
+      {{- .Arch }}
+
+checksum:
+  name_template: checksums.txt
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  use: git
+
+release:
+  draft: false
+  prerelease: auto
