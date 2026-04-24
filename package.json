@@ -1,6 +1,6 @@
 {
   "name": "@shsergei/pong-terminal",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Terminal Pong game with a native Go binary installer",
   "bin": {
     "pong-terminal": "bin/pong-terminal.js"
@@ -8,7 +8,8 @@
   "files": [
     "bin",
     "scripts",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "postinstall": "node scripts/postinstall.js"

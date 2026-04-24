@@ -83,3 +83,13 @@ go build -o pong-terminal.exe .
 - The game is designed for a modern terminal with Unicode support.
 - Best experience is in Windows Terminal, iTerm2, or a modern Linux terminal.
 - If the window is too small, enlarge the terminal a bit for a cleaner layout.
+
+## License
+
+This project is proprietary.
+
+You may install, run, and play the game for personal, non-commercial use.
+You may not modify, redistribute, or use the source code or packaged files
+without prior written permission.
+
+See [LICENSE](LICENSE) for the full terms.
